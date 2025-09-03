@@ -37,8 +37,6 @@
     .packages .price{display:flex;align-items:flex-end;gap:6px;margin:8px 0}
     .packages .price .num{font-size:2rem;font-weight:800}
     .packages .popular{position:absolute;top:-10px;left:16px;background:#111;color:#fff;font-size:.75rem;padding:4px 8px;border-radius:999px}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-    .gallery .ph{background:linear-gradient(135deg,#f1f5f9,#e5e7eb);border-radius:12px;aspect-ratio:3/4}
     .testimonials{display:grid;grid-template-columns:1fr;gap:16px}
     .faq .item{border-bottom:1px solid var(--border);padding:12px 0}
     .faq button{all:unset;display:flex;width:100%;align-items:center;justify-content:space-between;cursor:pointer}
@@ -60,10 +58,10 @@
         Yuvi's Team
       </div>
       <nav>
-        <a href="#services">שירותים</a>
-        <a href="#packages">חבילות</a>
+        <a href="#about">מי אני</a>
+        <a href="#services">סוגי אימון</a>
+        <a href="#packages">מחירון</a>
         <a href="#success">הצלחות</a>
-        <a href="#gallery-static">גלריה</a>
         <a href="#faq">שאלות</a>
         <a href="#contact">צור קשר</a>
       </nav>
@@ -72,6 +70,7 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="container grid grid-2" style="align-items:center">
         <div>
@@ -97,88 +96,117 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2 style="text-align:center">מי אני</h2>
+        <div class="card" style="margin-top:12px">
+          <p>אני יובל, בוגרת תואר ראשון בחינוך גופני, עם התמחות בשיקום חולי לב, שבץ וריאות, ומתמחה באימון נשים בהיריון ולאחר לידה. הייעוד שלי הוא ללוות אותך לתהליך מותאם אישית – חכם, בטוח ועקבי – שמבוסס על ידע מקצועי ויחס אישי.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAINING TYPES -->
     <section id="services">
       <div class="container">
-        <h2 style="text-align:center">מה תקבלו</h2>
-        <p class="muted" style="text-align:center;margin-top:-4px">מגוון מסלולים לכל רמה ומטרה</p>
+        <h2 style="text-align:center">אילו סוגי אימון תמצאו אצלי</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">בוחרים את הסגנון שמתאים לכם – או משלבים</p>
+
         <div class="grid grid-2" style="margin-top:12px">
-          <div class="card"><h3>אימון אישי 1:1</h3><p class="muted">תוכנית אימונים ותזונה מותאמת אישית, מעקב שבועי ותקשורת ישירה.</p></div>
-          <div class="card"><h3>אימון זוגי/חברתי</h3><p class="muted">להתמיד ביחד – כיף יותר וזול יותר. מושלם לבני זוג או חברות.</p></div>
-          <div class="card"><h3>ליווי אונליין</h3><p class="muted">לו״ז גמיש, מעקב בתקשורת שוטפת, אימונים בבית או בחדר כושר.</p></div>
-          <div class="card"><h3>חיזוק אחרי לידה/פציעה</h3><p class="muted">חזרה בטוחה וחכמה לשגרה תוך התייחסות מלאה לגוף ולמגבלות.</p></div>
+          <div class="card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <img src="./assets/yuvi-flyer-1.jpg" alt="Functional" style="width:90px;height:90px;object-fit:cover;border-radius:12px">
+              <div>
+                <h3>Functional</h3>
+                <p class="muted">שיפור תנועה יומיומית, יציבה ויציבות, גמישות וסיבולת – להפחתת פציעות ושדרוג איכות החיים.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <img src="./assets/yuvi-flyer-2.jpg" alt="Power / Strength" style="width:90px;height:90px;object-fit:cover;border-radius:12px">
+              <div>
+                <h3>Power (Strength)</h3>
+                <p class="muted">אימוני כוח עם התנגדות – לחיטוב, עלייה במסת שריר, וחילוף חומרים גבוה שמסייע בירידה במשקל.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <img src="./assets/yuvi-flyer-3.jpg" alt="Yoga" style="width:90px;height:90px;object-fit:cover;border-radius:12px">
+              <div>
+                <h3>Yoga</h3>
+                <p class="muted">גמישות, נשימות והרפיה: חיבור גוף־נפש שמחזק קואורדינציה, יציבה ואיזון ומפחית סטרס.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <img src="./assets/yuvi-flyer-4.jpg" alt="Rehabilitation" style="width:90px;height:90px;object-fit:cover;border-radius:12px">
+              <div>
+                <h3>Rehabilitation</h3>
+                <p class="muted">תכנית שיקום מותאמת אישית (לב/שבץ/ריאות ועוד): חיזוק הדרגתי ובטוח לשיפור היכולת התנועתית והסבולת.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- PRICING -->
     <section id="packages" class="packages">
       <div class="container">
-        <h2 style="text-align:center">חבילות ותמחור</h2>
-        <p class="muted" style="text-align:center;margin-top:-4px">שקיפות מלאה – בוחרים ומתחילים</p>
+        <h2 style="text-align:center">מחירון מנויים</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">בחרו את מספר הכניסות בחודש שמתאים לכם</p>
+
         <div class="grid grid-3" style="margin-top:12px">
-          <div class="card" style="position:relative">
-            <h3>Starter</h3>
-            <div class="price"><span class="num">₪399</span><span class="muted">/שבוע</span></div>
-            <ul style="padding:0 18px;margin:10px 0;line-height:1.8">
-              <li>2 אימונים אישיים</li><li>תוכנית בסיס + מעקב</li><li>תיקון תרגיל בווידאו</li>
-            </ul>
+          <div class="card">
+            <h3>4 כניסות בחודש</h3>
+            <div class="price"><span class="num">₪300</span></div>
+            <p class="muted">מעולה להתחלה/תחזוקה.</p>
           </div>
-          <div class="card" style="position:relative;outline:2px solid var(--primary)">
-            <div class="popular">הכי פופולרי</div>
-            <h3>Pro</h3>
-            <div class="price"><span class="num">₪1,390</span><span class="muted">/חודש</span></div>
-            <ul style="padding:0 18px;margin:10px 0;line-height:1.8">
-              <li>8 אימונים אישיים/זוגיים</li><li>תוכנית תזונה מלאה</li><li>מעקב שבועי + ווטסאפ חופשי</li>
-            </ul>
+          <div class="card" style="outline:2px solid var(--primary)">
+            <div class="popular">הכי משתלם</div>
+            <h3>8 כניסות בחודש</h3>
+            <div class="price"><span class="num">₪450</span></div>
+            <p class="muted">בערך פעמיים בשבוע.</p>
           </div>
-          <div class="card" style="position:relative">
-            <h3>VIP Transformation</h3>
-            <div class="price"><span class="num">₪3,900</span><span class="muted">/12 שבועות</span></div>
-            <ul style="padding:0 18px;margin:10px 0;line-height:1.8">
-              <li>תהליך מטרות והתאמה אישית</li><li>24 אימונים</li><li>בדיקות התקדמות + צילומים</li><li>גישה לחומרי וידאו</li>
-            </ul>
+          <div class="card">
+            <h3>12 כניסות בחודש</h3>
+            <div class="price"><span class="num">₪540</span></div>
+            <p class="muted">בערך שלוש פעמים בשבוע.</p>
           </div>
         </div>
-        <div style="display:flex;justify-content:center;margin-top:10px">
-          <a id="waPackages" class="btn btn-primary" target="_blank" rel="noreferrer">רוצה הצעת מחיר מותאמת? נדבר עכשיו</a>
+
+        <div class="card" style="margin-top:12px; text-align:center">
+          <h3 style="margin:0">מנוי חופשי חודשי</h3>
+          <div class="price" style="justify-content:center"><span class="num">₪600</span></div>
+          <p class="muted">למי שרוצה מקסימום גמישות.</p>
+          <img src="./assets/yuvi-flyer-5.jpg" alt="YUVI'S מחירון" style="width:100%;max-width:520px;height:auto;border-radius:12px;margin-top:8px">
+        </div>
+
+        <div style="display:flex;justify-content:center;margin-top:12px">
+          <a id="waPackages" class="btn btn-primary" target="_blank" rel="noreferrer">רוצה התאמה אישית? נדבר עכשיו</a>
         </div>
       </div>
     </section>
 
-<!-- === Instagram Success Section (Embeds) === -->
-<section id="success">
-  <div class="container">
-    <h2 style="text-align:center">הצלחות של מתאמנים</h2>
-    <p class="muted" style="text-align:center;margin-top:-4px">לפני/אחרי – ישירות מהאינסטגרם</p>
+    <!-- INSTAGRAM -->
+    <section id="success">
+      <div class="container">
+        <h2 style="text-align:center">הצלחות של מתאמנים</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">לפני/אחרי – ישירות מהאינסטגרם</p>
+        <div id="insta-feed" class="grid" style="grid-template-columns:1fr; gap:16px; margin-top:12px"></div>
+        <p style="text-align:center; margin-top:8px">
+          <a class="muted" target="_blank" rel="noreferrer" href="https://www.instagram.com/yuvis_team_/">לעוד תוצאות והיילייטס באינסטגרם</a>
+        </p>
+      </div>
+    </section>
 
-    <div id="insta-feed" class="grid" style="grid-template-columns:1fr; gap:16px; margin-top:12px"></div>
-
-    <p style="text-align:center; margin-top:8px">
-      <a class="muted" target="_blank" rel="noreferrer" href="https://www.instagram.com/yuvis_team_/">לעוד תוצאות והיילייטס באינסטגרם</a>
-    </p>
-  </div>
-</section>
-
-<!-- Instagram embed script -->
-<script async src="https://www.instagram.com/embed.js"></script>
-<script>
-  const INSTA_POSTS = [
-    "https://www.instagram.com/p/DJ1HnBCqOZc/",
-    "https://www.instagram.com/reel/DNvooDI2JYs/",
-    "https://www.instagram.com/reel/DL4scH2Mg4T/"
-  ];
-
-  const wrap = document.getElementById("insta-feed");
-  wrap.innerHTML = INSTA_POSTS.map(url => `
-    <blockquote class="instagram-media" data-instgrm-permalink="${url}" data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; max-width:540px; width:100%; border-radius:12px; box-shadow: 0 10px 20px rgba(0,0,0,.06);">
-    </blockquote>
-  `).join("");
-
-  function processIG(){ try{ if(window.instgrm && window.instgrm.Embeds){ window.instgrm.Embeds.process(); } }catch(e){} }
-  processIG();
-  setTimeout(processIG, 1000);
-</script>
-
+    <!-- TESTIMONIALS -->
     <section id="testimonials">
       <div class="container">
         <h2 style="text-align:center">מה אומרים עלינו</h2>
@@ -190,36 +218,25 @@
       </div>
     </section>
 
-<!-- === Static Gallery from PDF === -->
-<section id="gallery-static">
-  <div class="container">
-    <h2 style="text-align:center">גלריה מהסטודיו</h2>
-    <p class="muted" style="text-align:center;margin-top:-4px">תמונות מתוך החומרים של Yuvi's Team</p>
-
-    <div class="grid grid-2" style="margin-top:12px">
-      <div class="card" style="padding:8px">
-        <img src="./assets/yuvi-flyer-1.jpg" alt="YUVI'S - חומר שיווקי 1" style="width:100%;height:auto;border-radius:12px" />
-      </div>
-      <div class="card" style="padding:8px">
-        <img src="./assets/yuvi-flyer-2.jpg" alt="YUVI'S - חומר שיווקי 2" style="width:100%;height:auto;border-radius:12px" />
-      </div>
-      <div class="card" style="padding:8px">
-        <img src="./assets/yuvi-flyer-3.jpg" alt="YUVI'S - חומר שיווקי 3" style="width:100%;height:auto;border-radius:12px" />
-      </div>
-      <div class="card" style="padding:8px">
-        <img src="./assets/yuvi-flyer-4.jpg" alt="YUVI'S - חומר שיווקי 4" style="width:100%;height:auto;border-radius:12px" />
-      </div>
-      <div class="card" style="padding:8px">
-        <img src="./assets/yuvi-flyer-5.jpg" alt="YUVI'S - חומר שיווקי 5" style="width:100%;height:auto;border-radius:12px" />
-      </div>
-    </div>
-  </div>
-</section>
-
+    <!-- FAQ -->
     <section id="faq" class="faq">
       <div class="container">
         <h2 style="text-align:center">שאלות נפוצות</h2>
         <div style="margin-top:12px">
           <div class="item"><button type="button" data-faq><strong>האם האימונים מתאימים למתחילים?</strong><span>▼</span></button><div class="muted" hidden>כן! התוכנית מותאמת אישית לרמה שלך, כולל תרגילים בטוחים והדרגתיות.</div></div>
           <div class="item"><button type="button" data-faq><strong>איפה מתקיימים האימונים?</strong><span>▼</span></button><div class="muted" hidden>בחדר כושר/פארק/בבית – לפי הנוחות שלך ובתיאום מראש.</div></div>
-          <div class="item"><button type="button" data-faq><strong>מה לגבי תזונה?</strong><span>▼</span></button><div class="muted" hidden>מקבלים מסגרת
+          <div class="item"><button type="button" data-faq><strong>מה לגבי תזונה?</strong><span>▼</span></button><div class="muted" hidden>מקבלים מסגרת תזונתית מותאמת אישית עם מעקב שוטף והתאמות.</div></div>
+          <div class="item"><button type="button" data-faq><strong>אפשר לבטל אימון?</strong><span>▼</span></button><div class="muted" hidden>בהודעה של 24 שעות מראש – ללא חיוב. בפחות מכך ייחשב כמומש.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="lead">
+      <div class="container" style="max-width:560px">
+        <h2 style="text-align:center">מוכנים להתחיל?</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">השאירו פרטים – ונחזור אליכם בווטסאפ</p>
+        <div class="card">
+          <form id="leadForm">
+            <div><label>שם מלא</label><input required id="name" placeholder="לדוגמה: מאיה כהן" /></div>
+            <div><label>טלפון</label><input required id="phone" placeholder="05X-XXXXXXX" inputmode="
