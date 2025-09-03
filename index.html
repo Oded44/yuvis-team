@@ -1,0 +1,258 @@
+doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yuvi's Team – מאמנת כושר</title>
+  <meta name="description" content="אימונים אישיים וקבוצתיים + ליווי תזונתי מותאם אישית. קשר מהיר בווטסאפ." />
+  <style>
+    :root{
+      --bg:#f7f7f8;--card:#ffffff;--text:#111;--muted:#6b7280;
+      --primary:#111;--accent:#22c55e;--border:#e5e7eb;
+      --shadow:0 10px 20px rgba(0,0,0,.06);--radius:18px
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:linear-gradient(180deg,#fff,var(--bg))}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:980px;margin:0 auto;padding:0 16px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:999px;padding:12px 16px;font-weight:600;box-shadow:var(--shadow)}
+    .btn-primary{background:var(--primary);color:#fff}
+    .btn-accent{background:var(--accent);color:#fff}
+    .btn-outline{border:1px solid var(--border);background:#fff}
+    .badge{display:inline-flex;align-items:center;gap:.4rem;background:#f3f4f6;border-radius:999px;padding:6px 10px;font-size:.9rem}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+    .grid{display:grid;gap:16px}
+    .grid-2{grid-template-columns:1fr}
+    .grid-3{grid-template-columns:1fr}
+    .sticky{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:999}
+    header .row{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    nav a{font-size:.95rem} nav{display:none;gap:20px}
+    .hero{padding:24px 0 8px}
+    h1{font-size:2rem;margin:0 0 8px;line-height:1.2}
+    h2{font-size:1.5rem;margin:0 0 10px} h3{font-size:1.1rem;margin:0} p{margin:8px 0}
+    .muted{color:var(--muted)}
+    .hero-img{position:relative;overflow:hidden;border-radius:24px;aspect-ratio:4/3;box-shadow:var(--shadow)}
+    .hero-img img{width:100%;height:100%;object-fit:cover}
+    section{scroll-margin-top:80px;padding:24px 0}
+    .packages .price{display:flex;align-items:flex-end;gap:6px;margin:8px 0}
+    .packages .price .num{font-size:2rem;font-weight:800}
+    .packages .popular{position:absolute;top:-10px;left:16px;background:#111;color:#fff;font-size:.75rem;padding:4px 8px;border-radius:999px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery .ph{background:linear-gradient(135deg,#f1f5f9,#e5e7eb);border-radius:12px;aspect-ratio:3/4}
+    .testimonials{display:grid;grid-template-columns:1fr;gap:16px}
+    .faq .item{border-bottom:1px solid var(--border);padding:12px 0}
+    .faq button{all:unset;display:flex;width:100%;align-items:center;justify-content:space-between;cursor:pointer}
+    .lead form{display:grid;gap:12px}
+    .lead label{font-size:.9rem;margin-bottom:4px;display:block}
+    .lead input,.lead textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:14px;outline:none}
+    .lead input:focus,.lead textarea:focus{box-shadow:0 0 0 2px #1112}
+    footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;color:var(--muted);font-size:.95rem}
+    .floating-wa{position:fixed;left:16px;bottom:16px;background:var(--accent);color:#fff;padding:12px 16px;border-radius:999px;display:flex;align-items:center;gap:.5rem;box-shadow:var(--shadow);z-index:999}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    @media (min-width:640px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}nav{display:flex}h1{font-size:2.6rem}h2{font-size:1.8rem}}
+  </style>
+</head>
+<body>
+  <header class="sticky">
+    <div class="container row">
+      <div style="font-weight:700;display:flex;align-items:center;gap:.6rem">
+        <span style="display:inline-block;width:22px;height:22px;border-radius:6px;background:#111"></span>
+        Yuvi's Team
+      </div>
+      <nav>
+        <a href="#services">שירותים</a>
+        <a href="#packages">חבילות</a>
+        <a href="#success">הצלחות</a>
+        <a href="#faq">שאלות</a>
+        <a href="#contact">צור קשר</a>
+      </nav>
+      <a id="callTop" class="btn btn-primary" href="tel:+972500000000">התקשרו</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container grid grid-2" style="align-items:center">
+        <div>
+          <h1>יובי – מאמנת כושר אישית</h1>
+          <p class="muted">אימונים אישיים וקבוצתיים + ליווי תזונתי מותאם אישית</p>
+          <div class="chips" id="badges">
+            <span class="badge">מאות מתאמנים מרוצים</span>
+            <span class="badge">תוצאות שנשארות לאורך זמן</span>
+            <span class="badge">יחס אישי וסבלני</span>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <a id="waHero" class="btn btn-accent" target="_blank" rel="noreferrer">דברו איתי בווטסאפ</a>
+            <a id="callHero" class="btn btn-primary" href="tel:+972500000000">שיחת ייעוץ חינם</a>
+            <a class="btn btn-outline" target="_blank" rel="noreferrer" href="https://www.instagram.com/yuvis_team_/">אינסטגרם</a>
+          </div>
+          <p class="muted" style="font-size:.85rem;margin-top:6px">אזור פעילות: העמקים והסביבה</p>
+        </div>
+        <div>
+          <div class="hero-img">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop" alt="אימון כושר" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2 style="text-align:center">מה תקבלו</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">מגוון מסלולים לכל רמה ומטרה</p>
+        <div class="grid grid-2" style="margin-top:12px">
+          <div class="card"><h3>אימון אישי 1:1</h3><p class="muted">תוכנית אימונים ותזונה מותאמת אישית, מעקב שבועי ותקשורת ישירה.</p></div>
+          <div class="card"><h3>אימון זוגי/חברתי</h3><p class="muted">להתמיד ביחד – כיף יותר וזול יותר. מושלם לבני זוג או חברות.</p></div>
+          <div class="card"><h3>ליווי אונליין</h3><p class="muted">לו״ז גמיש, מעקב בתקשורת שוטפת, אימונים בבית או בחדר כושר.</p></div>
+          <div class="card"><h3>חיזוק אחרי לידה/פציעה</h3><p class="muted">חזרה בטוחה וחכמה לשגרה תוך התייחסות מלאה לגוף ולמגבלות.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="packages">
+      <div class="container">
+        <h2 style="text-align:center">חבילות ותמחור</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">שקיפות מלאה – בוחרים ומתחילים</p>
+        <div class="grid grid-3" style="margin-top:12px">
+          <div class="card" style="position:relative">
+            <h3>Starter</h3>
+            <div class="price"><span class="num">₪399</span><span class="muted">/שבוע</span></div>
+            <ul style="padding:0 18px;margin:10px 0;line-height:1.8">
+              <li>2 אימונים אישיים</li><li>תוכנית בסיס + מעקב</li><li>תיקון תרגיל בווידאו</li>
+            </ul>
+          </div>
+          <div class="card" style="position:relative;outline:2px solid var(--primary)">
+            <div class="popular">הכי פופולרי</div>
+            <h3>Pro</h3>
+            <div class="price"><span class="num">₪1,390</span><span class="muted">/חודש</span></div>
+            <ul style="padding:0 18px;margin:10px 0;line-height:1.8">
+              <li>8 אימונים אישיים/זוגיים</li><li>תוכנית תזונה מלאה</li><li>מעקב שבועי + ווטסאפ חופשי</li>
+            </ul>
+          </div>
+          <div class="card" style="position:relative">
+            <h3>VIP Transformation</h3>
+            <div class="price"><span class="num">₪3,900</span><span class="muted">/12 שבועות</span></div>
+            <ul style="padding:0 18px;margin:10px 0;line-height:1.8">
+              <li>תהליך מטרות והתאמה אישית</li><li>24 אימונים</li><li>בדיקות התקדמות + צילומים</li><li>גישה לחומרי וידאו</li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center;margin-top:10px">
+          <a id="waPackages" class="btn btn-primary" target="_blank" rel="noreferrer">רוצה הצעת מחיר מותאמת? נדבר עכשיו</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="success">
+      <div class="container">
+        <h2 style="text-align:center">הצלחות של מתאמנים</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">לפני/אחרי – התמדה שמביאה תוצאות</p>
+        <div class="gallery" style="margin-top:12px">
+          <div class="ph"></div><div class="ph"></div><div class="ph"></div>
+          <div class="ph"></div><div class="ph"></div><div class="ph"></div>
+          <div class="ph"></div><div class="ph"></div><div class="ph"></div>
+          <div class="ph"></div><div class="ph"></div><div class="ph"></div>
+        </div>
+        <p style="text-align:center;margin-top:8px">
+          <a class="muted" target="_blank" rel="noreferrer" href="https://www.instagram.com/yuvis_team_/">עוד תוצאות והיילייטס באינסטגרם</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <h2 style="text-align:center">מה אומרים עלינו</h2>
+        <div class="testimonials" style="margin-top:12px">
+          <div class="card"><p>“הגעתי בלי מוטיבציה והיום אני מתמידה 3 פעמים בשבוע – תודה יובי!”</p></div>
+          <div class="card"><p>“ירדתי 7 קילו בשלושה חודשים בלי להרגיש שאני בדיאטה.”</p></div>
+          <div class="card"><p>“הכי חשוב – למדתי לאהוב את הגוף שלי.”</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2 style="text-align:center">שאלות נפוצות</h2>
+        <div style="margin-top:12px">
+          <div class="item"><button type="button" data-faq><strong>האם האימונים מתאימים למתחילים?</strong><span>▼</span></button><div class="muted" hidden>כן! התוכנית מותאמת אישית לרמה שלך, כולל תרגילים בטוחים והדרגתיות.</div></div>
+          <div class="item"><button type="button" data-faq><strong>איפה מתקיימים האימונים?</strong><span>▼</span></button><div class="muted" hidden>בחדר כושר/פארק/בבית – לפי הנוחות שלך ובתיאום מראש.</div></div>
+          <div class="item"><button type="button" data-faq><strong>מה לגבי תזונה?</strong><span>▼</span></button><div class="muted" hidden>מקבלים מסגרת תזונתית מותאמת אישית עם מעקב שוטף והתאמות.</div></div>
+          <div class="item"><button type="button" data-faq><strong>אפשר לבטל אימון?</strong><span>▼</span></button><div class="muted" hidden>בהודעה של 24 שעות מראש – ללא חיוב. בפחות מכך ייחשב כמומש.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="lead">
+      <div class="container" style="max-width:560px">
+        <h2 style="text-align:center">מוכנים להתחיל?</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">השאירו פרטים – ונחזור אליכם בווטסאפ</p>
+        <div class="card">
+          <form id="leadForm">
+            <div><label>שם מלא</label><input required id="name" placeholder="לדוגמה: מאיה כהן" /></div>
+            <div><label>טלפון</label><input required id="phone" placeholder="05X-XXXXXXX" inputmode="tel" /></div>
+            <div><label>מה המטרה שלכם?</label><textarea id="goal" rows="3" placeholder="ירידה במשקל / חיטוב / מסה / יציבה / אחרי לידה…"></textarea></div>
+            <button class="btn btn-accent" type="submit">שליחה מהירה בווטסאפ</button>
+            <a id="callBottom" class="btn btn-primary" href="tel:+972500000000" style="width:100%;margin-top:6px">או – התקשרו עכשיו</a>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="font-weight:600">Yuvi's Team © <span id="year"></span></div>
+      <div>בניית אתר: קובץ אחד, מוכן לשיגור • מעוצב למובייל • RTL</div>
+    </div>
+  </footer>
+
+  <a id="waFloating" class="floating-wa" target="_blank" rel="noreferrer">ווטסאפ</a>
+
+  <script>
+    // === CONFIG ===
+    const BUSINESS = {
+      phoneIntl: "+972500000000", // ← תחליף למספר האמיתי שלך
+      instagram: "https://www.instagram.com/yuvis_team_/",
+      defaultMsg: "היי יובי! הגעתי מהאתר ואני רוצה לשמוע פרטים על אימונים."
+    };
+    const phoneDigits = BUSINESS.phoneIntl.replace("+","");
+    const waBase = `https://wa.me/${phoneDigits}`;
+    const encode = (t)=>encodeURIComponent(t);
+    const buildWA = (msg)=> `${waBase}?text=${encode(msg || BUSINESS.defaultMsg)}`;
+
+    function setLinks(){
+      document.getElementById("waHero").href = buildWA();
+      document.getElementById("waPackages").href = buildWA();
+      document.getElementById("waFloating").href = buildWA();
+      document.getElementById("callTop").href = `tel:${BUSINESS.phoneIntl}`;
+      document.getElementById("callHero").href = `tel:${BUSINESS.phoneIntl}`;
+      document.getElementById("callBottom").href = `tel:${BUSINESS.phoneIntl}`;
+    }
+    function faqSetup(){
+      document.querySelectorAll("[data-faq]").forEach(btn=>{
+        btn.addEventListener("click",()=>{
+          const next = btn.nextElementSibling;
+          const open = next.hasAttribute("hidden") ? false : true;
+          if(open){ next.setAttribute("hidden",""); btn.lastElementChild.textContent="▼"; }
+          else { next.removeAttribute("hidden"); btn.lastElementChild.textContent="▲"; }
+        });
+      });
+    }
+    function formSetup(){
+      document.getElementById("leadForm").addEventListener("submit",(e)=>{
+        e.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const goal = document.getElementById("goal").value.trim();
+        const msg = `היי, שמי ${name}, הטלפון שלי: ${phone}. המטרה שלי: ${goal}. הגעתי מהאתר ואני רוצה פרטים.`;
+        window.open(buildWA(msg),"_blank");
+      });
+    }
+    function init(){
+      setLinks(); faqSetup(); formSetup();
+      document.getElementById("year").textContent = new Date().getFullYear();
+    }
+    init();
+  </script>
+</body>
+  </html>
