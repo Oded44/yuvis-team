@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -15,7 +15,7 @@
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:linear-gradient(180deg,#fff,var(--bg))}
     a{color:inherit;text-decoration:none}
     .container{max-width:980px;margin:0 auto;padding:0 16px}
-0    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:999px;padding:12px 16px;font-weight:600;box-shadow:var(--shadow)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:999px;padding:12px 16px;font-weight:600;box-shadow:var(--shadow);cursor:pointer}
     .btn-primary{background:var(--primary);color:#fff}
     .btn-accent{background:var(--accent);color:#fff}
     .btn-outline{border:1px solid var(--border);background:#fff}
@@ -37,8 +37,6 @@
     .packages .price{display:flex;align-items:flex-end;gap:6px;margin:8px 0}
     .packages .price .num{font-size:2rem;font-weight:800}
     .packages .popular{position:absolute;top:-10px;left:16px;background:#111;color:#fff;font-size:.75rem;padding:4px 8px;border-radius:999px}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-    .gallery .ph{background:linear-gradient(135deg,#f1f5f9,#e5e7eb);border-radius:12px;aspect-ratio:3/4}
     .testimonials{display:grid;grid-template-columns:1fr;gap:16px}
     .faq .item{border-bottom:1px solid var(--border);padding:12px 0}
     .faq button{all:unset;display:flex;width:100%;align-items:center;justify-content:space-between;cursor:pointer}
@@ -50,6 +48,8 @@
     .floating-wa{position:fixed;left:16px;bottom:16px;background:var(--accent);color:#fff;padding:12px 16px;border-radius:999px;display:flex;align-items:center;gap:.5rem;box-shadow:var(--shadow);z-index:999}
     .chips{display:flex;flex-wrap:wrap;gap:8px}
     @media (min-width:640px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}nav{display:flex}h1{font-size:2.6rem}h2{font-size:1.8rem}}
+    /* highlight when selected */
+    label.card input:checked + div { outline:2px solid var(--accent); }
   </style>
 </head>
 <body>
@@ -60,8 +60,9 @@
         Yuvi's Team
       </div>
       <nav>
-        <a href="#services">שירותים</a>
-        <a href="#packages">חבילות</a>
+        <a href="#about">מי אני</a>
+        <a href="#services">סוגי אימון</a>
+        <a href="#packages">מחירון</a>
         <a href="#success">הצלחות</a>
         <a href="#faq">שאלות</a>
         <a href="#contact">צור קשר</a>
@@ -70,114 +71,199 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container grid grid-2" style="align-items:center">
-        <div>
-          <h1>יובי – מאמנת כושר אישית</h1>
-          <p class="muted">אימונים אישיים וקבוצתיים + ליווי תזונתי מותאם אישית</p>
-          <div class="chips" id="badges">
-            <span class="badge">מאות מתאמנים מרוצים</span>
-            <span class="badge">תוצאות שנשארות לאורך זמן</span>
-            <span class="badge">יחס אישי וסבלני</span>
-          </div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
-            <a id="waHero" class="btn btn-accent" target="_blank" rel="noreferrer">דברו איתי בווטסאפ</a>
-            <a id="callHero" class="btn btn-primary" href="tel:+972545575518">שיחת ייעוץ חינם</a>
-            <a class="btn btn-outline" target="_blank" rel="noreferrer" href="https://www.instagram.com/yuvis_team_/">אינסטגרם</a>
-          </div>
-          <p class="muted" style="font-size:.85rem;margin-top:6px">אזור פעילות: העמקים והסביבה</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container grid grid-2" style="align-items:center">
+      <div>
+        <h1>יובי – מאמנת כושר אישית</h1>
+        <p class="muted">אימונים אישיים וקבוצתיים + ליווי תזונתי מותאם אישית</p>
+        <div class="chips" id="badges">
+          <span class="badge">מאות מתאמנים מרוצים</span>
+          <span class="badge">תוצאות שנשארות לאורך זמן</span>
+          <span class="badge">יחס אישי וסבלני</span>
         </div>
-        <div>
-          <div class="hero-img">
-            <img src="./assets/yuvi-hero.jpg" alt="יובי – מאמנת כושר" />
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a id="waHero" class="btn btn-accent" target="_blank" rel="noreferrer">דברו איתי בווטסאפ</a>
+          <a id="callHero" class="btn btn-primary" href="tel:+972545575518">שיחת ייעוץ חינם</a>
+          <a class="btn btn-outline" target="_blank" rel="noreferrer" href="https://www.instagram.com/yuvis_team_/">אינסטגרם</a>
+        </div>
+        <p class="muted" style="font-size:.85rem;margin-top:6px">אזור פעילות: העמקים והסביבה</p>
+      </div>
+      <div>
+        <div class="hero-img">
+          <img src="./assets/yuvi-hero.jpg" alt="יובי – מאמנת כושר" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING INTERACTIVE -->
+  <section id="packages" class="packages">
+    <div class="container">
+      <h2 style="text-align:center">מחירון מנויים</h2>
+      <p class="muted" style="text-align:center;margin-top:-4px">בחרו את מספר הכניסות בחודש שמתאים לכם</p>
+
+      <form id="packageForm" class="grid grid-3" style="margin-top:12px">
+        <label class="card" style="cursor:pointer">
+          <input type="radio" name="plan" value="4 כניסות – ₪300" style="display:none">
+          <div>
+            <h3>4 כניסות בחודש</h3>
+            <div class="price"><span class="num">₪300</span></div>
+            <p class="muted">מעולה להתחלה/תחזוקה.</p>
           </div>
+        </label>
+
+        <label class="card" style="cursor:pointer">
+          <input type="radio" name="plan" value="8 כניסות – ₪450" style="display:none">
+          <div>
+            <div class="popular">הכי משתלם</div>
+            <h3>8 כניסות בחודש</h3>
+            <div class="price"><span class="num">₪450</span></div>
+            <p class="muted">בערך פעמיים בשבוע.</p>
+          </div>
+        </label>
+
+        <label class="card" style="cursor:pointer">
+          <input type="radio" name="plan" value="12 כניסות – ₪540" style="display:none">
+          <div>
+            <h3>12 כניסות בחודש</h3>
+            <div class="price"><span class="num">₪540</span></div>
+            <p class="muted">בערך שלוש פעמים בשבוע.</p>
+          </div>
+        </label>
+      </form>
+
+      <div class="card" style="margin-top:12px; text-align:center">
+        <h3 style="margin:0">מנוי חופשי חודשי</h3>
+        <div class="price" style="justify-content:center"><span class="num">₪600</span></div>
+        <p class="muted">למי שרוצה מקסימום גמישות.</p>
+        <img src="./assets/yuvi-flyer-5.jpg" alt="YUVI'S מחירון" style="width:100%;max-width:520px;height:auto;border-radius:12px;margin-top:8px">
+      </div>
+
+      <div style="text-align:center;margin-top:12px">
+        <button type="button" class="btn btn-primary" onclick="choosePlan()">בחרתי – דברו איתי בווטסאפ</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function choosePlan(){
+      const checked = document.querySelector('input[name="plan"]:checked');
+      if(!checked){ alert("אנא בחרו מנוי קודם"); return; }
+      const msg = "שלום! אני מתעניין במנוי: " + checked.value;
+      window.open(`https://wa.me/972545575518?text=${encodeURIComponent(msg)}`,"_blank");
+    }
+  </script>
+
+  <!-- כאן ממשיכים שאר הסקשנים (About, Services, Instagram, FAQ, Contact, Footer וכו') -->
+
+</body>
+</html>          <p>אני יובל, בוגרת תואר ראשון בחינוך גופני, עם התמחות בשיקום חולי לב, שבץ וריאות, ומתמחה באימון נשים בהיריון ולאחר לידה. הייעוד שלי הוא ללוות אותך לתהליך מותאם אישית – חכם, בטוח ועקבי – שמבוסס על ידע מקצועי ויחס אישי.</p>
         </div>
       </div>
     </section>
 
+    <!-- TRAINING TYPES -->
     <section id="services">
       <div class="container">
-        <h2 style="text-align:center">מה תקבלו</h2>
-        <p class="muted" style="text-align:center;margin-top:-4px">מגוון מסלולים לכל רמה ומטרה</p>
+        <h2 style="text-align:center">אילו סוגי אימון תמצאו אצלי</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">בוחרים את הסגנון שמתאים לכם – או משלבים</p>
+
         <div class="grid grid-2" style="margin-top:12px">
-          <div class="card"><h3>אימון אישי 1:1</h3><p class="muted">תוכנית אימונים ותזונה מותאמת אישית, מעקב שבועי ותקשורת ישירה.</p></div>
-          <div class="card"><h3>אימון זוגי/חברתי</h3><p class="muted">להתמיד ביחד – כיף יותר וזול יותר. מושלם לבני זוג או חברות.</p></div>
-          <div class="card"><h3>ליווי אונליין</h3><p class="muted">לו״ז גמיש, מעקב בתקשורת שוטפת, אימונים בבית או בחדר כושר.</p></div>
-          <div class="card"><h3>חיזוק אחרי לידה/פציעה</h3><p class="muted">חזרה בטוחה וחכמה לשגרה תוך התייחסות מלאה לגוף ולמגבלות.</p></div>
+          <div class="card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <img src="./assets/yuvi-flyer-1.jpg" alt="Functional" style="width:90px;height:90px;object-fit:cover;border-radius:12px">
+              <div>
+                <h3>Functional</h3>
+                <p class="muted">שיפור תנועה יומיומית, יציבה ויציבות, גמישות וסיבולת – להפחתת פציעות ושדרוג איכות החיים.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <img src="./assets/yuvi-flyer-2.jpg" alt="Power / Strength" style="width:90px;height:90px;object-fit:cover;border-radius:12px">
+              <div>
+                <h3>Power (Strength)</h3>
+                <p class="muted">אימוני כוח עם התנגדות – לחיטוב, עלייה במסת שריר, וחילוף חומרים גבוה שמסייע בירידה במשקל.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <img src="./assets/yuvi-flyer-3.jpg" alt="Yoga" style="width:90px;height:90px;object-fit:cover;border-radius:12px">
+              <div>
+                <h3>Yoga</h3>
+                <p class="muted">גמישות, נשימות והרפיה: חיבור גוף־נפש שמחזק קואורדינציה, יציבה ואיזון ומפחית סטרס.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="display:flex;gap:12px;align-items:center">
+              <img src="./assets/yuvi-flyer-4.jpg" alt="Rehabilitation" style="width:90px;height:90px;object-fit:cover;border-radius:12px">
+              <div>
+                <h3>Rehabilitation</h3>
+                <p class="muted">תכנית שיקום מותאמת אישית (לב/שבץ/ריאות ועוד): חיזוק הדרגתי ובטוח לשיפור היכולת התנועתית והסבולת.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- PRICING -->
     <section id="packages" class="packages">
       <div class="container">
-        <h2 style="text-align:center">חבילות ותמחור</h2>
-        <p class="muted" style="text-align:center;margin-top:-4px">שקיפות מלאה – בוחרים ומתחילים</p>
+        <h2 style="text-align:center">מחירון מנויים</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">בחרו את מספר הכניסות בחודש שמתאים לכם</p>
+
         <div class="grid grid-3" style="margin-top:12px">
-          <div class="card" style="position:relative">
-            <h3>Starter</h3>
-            <div class="price"><span class="num">₪399</span><span class="muted">/שבוע</span></div>
-            <ul style="padding:0 18px;margin:10px 0;line-height:1.8">
-              <li>2 אימונים אישיים</li><li>תוכנית בסיס + מעקב</li><li>תיקון תרגיל בווידאו</li>
-            </ul>
+          <div class="card">
+            <h3>4 כניסות בחודש</h3>
+            <div class="price"><span class="num">₪300</span></div>
+            <p class="muted">מעולה להתחלה/תחזוקה.</p>
           </div>
-          <div class="card" style="position:relative;outline:2px solid var(--primary)">
-            <div class="popular">הכי פופולרי</div>
-            <h3>Pro</h3>
-            <div class="price"><span class="num">₪1,390</span><span class="muted">/חודש</span></div>
-            <ul style="padding:0 18px;margin:10px 0;line-height:1.8">
-              <li>8 אימונים אישיים/זוגיים</li><li>תוכנית תזונה מלאה</li><li>מעקב שבועי + ווטסאפ חופשי</li>
-            </ul>
+          <div class="card" style="outline:2px solid var(--primary)">
+            <div class="popular">הכי משתלם</div>
+            <h3>8 כניסות בחודש</h3>
+            <div class="price"><span class="num">₪450</span></div>
+            <p class="muted">בערך פעמיים בשבוע.</p>
           </div>
-          <div class="card" style="position:relative">
-            <h3>VIP Transformation</h3>
-            <div class="price"><span class="num">₪3,900</span><span class="muted">/12 שבועות</span></div>
-            <ul style="padding:0 18px;margin:10px 0;line-height:1.8">
-              <li>תהליך מטרות והתאמה אישית</li><li>24 אימונים</li><li>בדיקות התקדמות + צילומים</li><li>גישה לחומרי וידאו</li>
-            </ul>
+          <div class="card">
+            <h3>12 כניסות בחודש</h3>
+            <div class="price"><span class="num">₪540</span></div>
+            <p class="muted">בערך שלוש פעמים בשבוע.</p>
           </div>
         </div>
-        <div style="display:flex;justify-content:center;margin-top:10px">
-          <a id="waPackages" class="btn btn-primary" target="_blank" rel="noreferrer">רוצה הצעת מחיר מותאמת? נדבר עכשיו</a>
+
+        <div class="card" style="margin-top:12px; text-align:center">
+          <h3 style="margin:0">מנוי חופשי חודשי</h3>
+          <div class="price" style="justify-content:center"><span class="num">₪600</span></div>
+          <p class="muted">למי שרוצה מקסימום גמישות.</p>
+          <img src="./assets/yuvi-flyer-5.jpg" alt="YUVI'S מחירון" style="width:100%;max-width:520px;height:auto;border-radius:12px;margin-top:8px">
+        </div>
+
+        <div style="display:flex;justify-content:center;margin-top:12px">
+          <a id="waPackages" class="btn btn-primary" target="_blank" rel="noreferrer">רוצה התאמה אישית? נדבר עכשיו</a>
         </div>
       </div>
     </section>
 
-<!-- === Instagram Success Section (Embeds) === -->
-<section id="success">
-  <div class="container">
-    <h2 style="text-align:center">הצלחות של מתאמנים</h2>
-    <p class="muted" style="text-align:center;margin-top:-4px">לפני/אחרי – ישירות מהאינסטגרם</p>
+    <!-- INSTAGRAM -->
+    <section id="success">
+      <div class="container">
+        <h2 style="text-align:center">הצלחות של מתאמנים</h2>
+        <p class="muted" style="text-align:center;margin-top:-4px">לפני/אחרי – ישירות מהאינסטגרם</p>
+        <div id="insta-feed" class="grid" style="grid-template-columns:1fr; gap:16px; margin-top:12px"></div>
+        <p style="text-align:center; margin-top:8px">
+          <a class="muted" target="_blank" rel="noreferrer" href="https://www.instagram.com/yuvis_team_/">לעוד תוצאות והיילייטס באינסטגרם</a>
+        </p>
+      </div>
+    </section>
 
-    <div id="insta-feed" class="grid" style="grid-template-columns:1fr; gap:16px; margin-top:12px"></div>
-
-    <p style="text-align:center; margin-top:8px">
-      <a class="muted" target="_blank" rel="noreferrer" href="https://www.instagram.com/yuvis_team_/">לעוד תוצאות והיילייטס באינסטגרם</a>
-    </p>
-  </div>
-</section>
-
-<!-- Instagram embed script -->
-<script async src="https://www.instagram.com/embed.js"></script>
-<script>
-  const INSTA_POSTS = [
-    "https://www.instagram.com/p/DJ1HnBCqOZc/",
-    "https://www.instagram.com/reel/DNvooDI2JYs/",
-    "https://www.instagram.com/reel/DL4scH2Mg4T/"
-  ];
-
-  const wrap = document.getElementById("insta-feed");
-  wrap.innerHTML = INSTA_POSTS.map(url => `
-    <blockquote class="instagram-media" data-instgrm-permalink="${url}" data-instgrm-version="14"
-      style="background:#fff; border:0; margin:0 auto; max-width:540px; width:100%; border-radius:12px; box-shadow: 0 10px 20px rgba(0,0,0,.06);">
-    </blockquote>
-  `).join("");
-
-  function processIG(){ try{ if(window.instgrm && window.instgrm.Embeds){ window.instgrm.Embeds.process(); } }catch(e){} }
-  processIG();
-  setTimeout(processIG, 1000);
-</script>
-
+    <!-- TESTIMONIALS -->
     <section id="testimonials">
       <div class="container">
         <h2 style="text-align:center">מה אומרים עלינו</h2>
@@ -189,6 +275,7 @@
       </div>
     </section>
 
+    <!-- FAQ -->
     <section id="faq" class="faq">
       <div class="container">
         <h2 style="text-align:center">שאלות נפוצות</h2>
@@ -201,6 +288,7 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="lead">
       <div class="container" style="max-width:560px">
         <h2 style="text-align:center">מוכנים להתחיל?</h2>
@@ -208,70 +296,4 @@
         <div class="card">
           <form id="leadForm">
             <div><label>שם מלא</label><input required id="name" placeholder="לדוגמה: מאיה כהן" /></div>
-            <div><label>טלפון</label><input required id="phone" placeholder="05X-XXXXXXX" inputmode="tel" /></div>
-            <div><label>מה המטרה שלכם?</label><textarea id="goal" rows="3" placeholder="ירידה במשקל / חיטוב / מסה / יציבה / אחרי לידה…"></textarea></div>
-            <button class="btn btn-accent" type="submit">שליחה מהירה בווטסאפ</button>
-            <a id="callBottom" class="btn btn-primary" href="tel:+972545575518" style="width:100%;margin-top:6px">או – התקשרו עכשיו</a>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div style="font-weight:600">Yuvi's Team © <span id="year"></span></div>
-      <div>בניית אתר: קובץ אחד, מוכן לשיגור • מעוצב למובייל • RTL</div>
-    </div>
-  </footer>
-
-  <a id="waFloating" class="floating-wa" target="_blank" rel="noreferrer">ווטסאפ</a>
-
-  <script>
-    // === CONFIG ===
-    const BUSINESS = {
-      phoneIntl: "+972545575518", // ← תחליף למספר האמיתי שלך
-      instagram: "https://www.instagram.com/yuvis_team_/",
-      defaultMsg: "היי יובי! הגעתי מהאתר ואני רוצה לשמוע פרטים על אימונים."
-    };
-    const phoneDigits = BUSINESS.phoneIntl.replace("+","");
-    const waBase = `https://wa.me/${phoneDigits}`;
-    const encode = (t)=>encodeURIComponent(t);
-    const buildWA = (msg)=> `${waBase}?text=${encode(msg || BUSINESS.defaultMsg)}`;
-
-    function setLinks(){
-      document.getElementById("waHero").href = buildWA();
-      document.getElementById("waPackages").href = buildWA();
-      document.getElementById("waFloating").href = buildWA();
-      document.getElementById("callTop").href = `tel:${BUSINESS.phoneIntl}`;
-      document.getElementById("callHero").href = `tel:${BUSINESS.phoneIntl}`;
-      document.getElementById("callBottom").href = `tel:${BUSINESS.phoneIntl}`;
-    }
-    function faqSetup(){
-      document.querySelectorAll("[data-faq]").forEach(btn=>{
-        btn.addEventListener("click",()=>{
-          const next = btn.nextElementSibling;
-          const open = next.hasAttribute("hidden") ? false : true;
-          if(open){ next.setAttribute("hidden",""); btn.lastElementChild.textContent="▼"; }
-          else { next.removeAttribute("hidden"); btn.lastElementChild.textContent="▲"; }
-        });
-      });
-    }
-    function formSetup(){
-      document.getElementById("leadForm").addEventListener("submit",(e)=>{
-        e.preventDefault();
-        const name = document.getElementById("name").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const goal = document.getElementById("goal").value.trim();
-        const msg = `היי, שמי ${name}, הטלפון שלי: ${phone}. המטרה שלי: ${goal}. הגעתי מהאתר ואני רוצה פרטים.`;
-        window.open(buildWA(msg),"_blank");
-      });
-    }
-    function init(){
-      setLinks(); faqSetup(); formSetup();
-      document.getElementById("year").textContent = new Date().getFullYear();
-    }
-    init();
-  </script>
-</body>
-  </html>
+            <div><label>טלפון</label><input required id="phone" placeholder="05X-XXXXXXX" inputmode="
